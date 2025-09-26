@@ -79,9 +79,9 @@ classDiagram
     InventoryController --> InventoryServiceImpl
     InventoryServiceImpl --> InventoryRepository
 ```
-##🚀 Ejecución
+## 🚀 Ejecución
 
-###🧪 Local
+### 🧪 Local
 
 ```bash
 mvn clean install
@@ -89,25 +89,25 @@ mvn spring-boot:run -Dspring-boot.run.profiles=local
 ```
 Disponible en: http://localhost:8080/api/inventory
 
-##🐳 Docker
+## 🐳 Docker
 ```bash
 docker build -t inventory-service .
 docker run -p 8081:8081 inventory-service
 ```
 
-##🧪 Pruebas
+## 🧪 Pruebas
 ```bash
 mvn test
 ```
 Cubre tanto unit tests como integration tests con H2.
 
-##📊 Observabilidad
+## 📊 Observabilidad
 
 Health: GET /actuator/health
 
 Info: GET /actuator/info
 
-##📄 Notas
+## 📄 Notas
 
 Consistencia manejada con optimistic locking (@Version).
 
