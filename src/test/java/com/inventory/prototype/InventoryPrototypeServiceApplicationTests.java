@@ -1,4 +1,4 @@
-package com.inventory_prototype_service;
+package com.inventory.prototype;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
