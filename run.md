@@ -72,19 +72,23 @@ Info → http://localhost:8080/actuator/info
 ## 🧪 Probar con cURL
 ### Crear stock
 ```bash
-curl -X POST "http://localhost:8080/api/inventory?sku=SKU123&name=Laptop&quantity=10"
+curl -X POST "http://localhost:8080/api/inventory?sku=SKU123&name=Laptop&quantity=10" \
+-H "X-API-KEY: INVENTORY_SERVICE_KEY"
 ```
 ### Listar inventario
 ```bash
-curl -X GET "http://localhost:8080/api/inventory"
+curl -X GET "http://localhost:8080/api/inventory" \
+-H "X-API-KEY: INVENTORY_SERVICE_KEY"
 ```
 ### Reservar stock
 ```bash
-curl -X POST "http://localhost:8080/api/inventory/SKU123/reserve?quantity=3"
+curl -X POST "http://localhost:8080/api/inventory/SKU123/reserve?quantity=3" \
+-H "X-API-KEY: INVENTORY_SERVICE_KEY"
 ```
 ### Liberar stock
 ```bash
-curl -X POST "http://localhost:8080/api/inventory/SKU123/release?quantity=2"
+curl -X POST "http://localhost:8080/api/inventory/SKU123/release?quantity=2" \
+-H "X-API-KEY: INVENTORY_SERVICE_KEY"
 ```
 ## ✅ Notas
 Usa application-local.yml para SQLite.

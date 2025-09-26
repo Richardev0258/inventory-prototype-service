@@ -42,6 +42,10 @@ Implementa consistencia mediante *optimistic locking* con `@Version` y expone en
 - **POST** `/api/inventory/{sku}/reserve?quantity=...` → Reservar stock.
 - **POST** `/api/inventory/{sku}/release?quantity=...` → Liberar stock.
 
+## 🔐 Seguridad: Todos los endpoints requieren la cabecera:
+
+X-API-KEY: INVENTORY_SERVICE_KEY
+
 ## 📐 Diagrama Simplificado
 
 ```mermaid
