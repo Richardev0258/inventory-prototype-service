@@ -83,6 +83,20 @@ classDiagram
     InventoryController --> InventoryServiceImpl
     InventoryServiceImpl --> InventoryRepository
 ```
+## 🌐 Flujo Distribuido del Inventario
+
+```mermaid
+flowchart TD
+    A[Cliente Web/App] -->|Consulta stock| B[API Gateway/Load Balancer]
+    B --> C[Inventory Service - Tienda Local]
+    C -->|BD local SQLite| D[(DB Local)]
+
+    C -->|Sincronización periódica| E[DB Central]
+    E --> F[Inventory Service Central]
+
+    F -->|Consolida datos| G[(DB Centralizada)]
+    
+```
 ## 🚀 Ejecución
 
 ### 🧪 Local
